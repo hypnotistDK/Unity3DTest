@@ -31,7 +31,7 @@ public class enemySight : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Hit this one: " + other.gameObject.transform.position);
+            //Debug.Log("Hit this one: " + other.gameObject.transform.position);
             agent.SetDestination(other.gameObject.transform.position);
         }
 
@@ -41,9 +41,8 @@ public class enemySight : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("please stop: ");
+            //Debug.Log("please stop: ");
             agent.SetDestination(other.gameObject.transform.position);
-            //agent.Stop();
             GetComponent<Rigidbody>().isKinematic = true;
         }
     }
