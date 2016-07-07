@@ -29,7 +29,7 @@ public class enemySight : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && other.GetType() == typeof(CapsuleCollider))
         {
             //Debug.Log("Hit this one: " + other.gameObject.transform.position);
             agent.SetDestination(other.gameObject.transform.position);
@@ -39,7 +39,7 @@ public class enemySight : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && other.GetType() == typeof(CapsuleCollider))
         {
             //Debug.Log("please stop: ");
             agent.SetDestination(other.gameObject.transform.position);
